@@ -7,3 +7,5 @@
 ### Links and Resources
 
 ### Setup
+
+pip install -r requirements.txt
