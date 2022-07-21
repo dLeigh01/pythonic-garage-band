@@ -1,4 +1,5 @@
 class Band:
+    instances = []
     def __init__(self, name, members):
         self.name = name
         self.members = members
@@ -12,8 +13,8 @@ class Band:
         return solos
 
     @classmethod
-    def get_instruments(cls):
-        pass
+    def to_list(cls):
+        return cls.instances
 
 class Musician(Band):
     def __init__(self, name):
