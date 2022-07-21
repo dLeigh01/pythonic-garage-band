@@ -5,6 +5,12 @@ class Band:
         self.members = members
         self.instances.append(self)
 
+    def __str__(self):
+        return f"My name is {self.name} and I play {self.instrument}"
+
+    def __repr__(self):
+        return f"{type(self).__name__} instance. Name = {self.name}"
+
     def play_solos(self):
         solos = []
         for member in self.members:
@@ -26,17 +32,10 @@ class Musician(Band):
     def get_instrument(self):
         return self.instrument
 
-    def __str__(self):
-        return f"My name is {self.name} and I play {self.instrument}"
-
-
 
 class Guitarist(Musician):
     solo = "face melting guitar solo"
     instrument = "guitar"
-
-    def __repr__(self):
-        return f"Guitarist instance. Name = {self.name}"
 
 
 class Bassist(Musician):
@@ -44,13 +43,6 @@ class Bassist(Musician):
     instrument = "bass"
 
 
-    def __repr__(self):
-        return f"Bassist instance. Name = {self.name}"
-
-
 class Drummer(Musician):
     solo = "rattle boom crash"
     instrument = "drums"
-
-    def __repr__(self):
-        return f"Drummer instance. Name = {self.name}"
